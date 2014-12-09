@@ -15,7 +15,8 @@ Integer("256") # convert a string
 Integer("0b11110010") # convert a binary number from a string
 Integer(0177) # convert an octal number
 Integer(0x20) # convert a hexadecimal number
-Integer(?z) # convert a character code
+# invalid value for Integer(): "z" 
+# Integer(?z) # convert a character code
 
 Float(167) # convert an integer 
 Float("77") # convert a string

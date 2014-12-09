@@ -3,10 +3,10 @@
 lang = :fr
 
 dog = case lang
-  when :en: "dog"
-  when :es: "perro"
-  when :fr: "chien"
-  when :de: "Hund"
+  when :en then "dog"
+  when :es then "perro"
+  when :fr then "chien"
+  when :de then "Hund"
   else      "dog"
 end
 # "chien" is assigned to dog
@@ -14,10 +14,10 @@ end
 lang = "de"
 
 dog = case lang
-  when "en": "dog"
-  when "es": "perro"
-  when "fr": "chien"
-  when "de": "Hund"
+  when "en" then "dog"
+  when "es" then "perro"
+  when "fr" then "chien"
+  when "de" then "Hund"
   else      "dog"
 end
 # "Hund" is assigned to dog

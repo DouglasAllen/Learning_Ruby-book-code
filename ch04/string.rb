@@ -73,7 +73,7 @@ greet.freeze
 greet.concat("!") # => TypeError: can't modify frozen string
 
 # is the object frozen?
-greet.frozen? # => true
+p greet.frozen? # => true
 
 line = "A horse! a horse! my kingdom for a horse!"
 cite = "Act V, Scene IV"

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-Dir.chdir( "Ratios" )
+Dir.chdir( "ch08/Ratios" )
 home = Dir.pwd
 p home 
 Dir.chdir( ".." )
@@ -18,7 +18,7 @@ Dir.rmdir( "sandbox" )
 
 Dir.entries( "." ).each { |e| puts e }
 
-Dir.foreach( "/usr/local/src/ruby-1.8.6" ) { |e| puts e }
+Dir.foreach( "/usr/local/src/ruby-1.8.6-p286" ) { |e| puts e }
 
 dir = Dir.open( "." )
 dir.path
@@ -33,16 +33,16 @@ file = File.new( "f.rb", "w" )
 file.close
 File.delete( "f.rb" )
 
-file = File.open( "sonnet_129.txt" )
+file = File.open( "../sonnet_129.txt" )
 file.each { |line| print "#{file.lineno}. ", line }
 file.close
 
-ARGV << "sonnet_129.txt"
+ARGV << "../sonnet_129.txt"
 print while gets
 
-p ARGV # => ["sonnet_119.txt"]
+p ARGV # => ["../sonnet_119.txt"]
 
-ARGV#[0] # => ["sonnet_119.txt"]
+ARGV#[0] # => ["../sonnet_119.txt"]
 
 File.new( "books.txt", "w" )
 File.rename( "books.txt", "chaps.txt" )
@@ -50,21 +50,21 @@ File.delete( "chaps.txt" )
 
 File::open("x.txt") if File::exists?( "x.txt" )
 
-File.file?( "sonnet29.txt" ) # => true
+File.file?( "../sonnet29.txt" ) # => true
 
 File::directory?( "/usr/local/bin" ) # => true
 
 File::directory?( "access.rb" ) # => false
-File.readable?( "sonnet_119.txt" ) # => true
-File.writable?( "sonnet_119.txt" ) # => true
-File.executable?( "sonnet_119.txt" ) # => false
+File.readable?( "../sonnet_119.txt" ) # => true
+File.writable?( "../sonnet_119.txt" ) # => true
+File.executable?( "../sonnet_119.txt" ) # => false
 
 system("touch chap.txt") # Create a zero-length file with a system command
 File.zero?( "chap.txt" ) # => true
 File.delete( "chap.txt" )
 
-File.size?( "sonnet_129.txt" ) # => 594
-File.size( "sonnet_129.txt" ) # => 594
+File.size?( "../sonnet_129.txt" ) # => 594
+File.size( "../sonnet_129.txt" ) # => 594
 
 File::ftype( "access.rb" ) # => "file"
 
@@ -120,12 +120,12 @@ ios.getc # => Matz
 ios.close
 =end
 
-file = File.new( "sonnet_29.txt" )
+file = File.new( "../sonnet_29.txt" )
 file.gets # => "When in disgrace with fortune and men's eyes\n"
 file.gets # => "I all alone beweep my outcast state,\n"
 file.close
 
-file = File.new( "sonnet_119.txt" )
+file = File.new( "../sonnet_119.txt" )
 file.readline # => "Let me not to the marriage of true minds\n"
 file.readline # => "Admit impediments. Love is not love\n"
 file.readline # => "Which alters when it alteration finds,\n"

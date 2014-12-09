@@ -24,7 +24,7 @@ zip.keys # => [83110, 83127, 82336, 83112, 82084, 83025, 82442, 82443, 82240]
 zip.values # => ["Turnerville", "Thayne", "Tipton", "Turnerville", "Tie Siding", "Teton Village", "Ten Sleep", "Thermopolis", "Torrington"]
 zip.values_at 82084 # => ["Tie Siding"]
 zip.values_at 82442, 82443, 82240 # => ["Ten Sleep", "Thermopolis", "Torrington"]
-zip.index "Thayne" # => 83127
+zip.key "Thayne" # => 83127
 zip.select { |key,val| key > 83000 } # => [[83110, "Turnerville"], [83127, "Thayne"], [83112, "Turnerville"], [83025, "Teton Village"]] 
 
 zip.each {|k,v| puts "#{k}/#{v}" } # =>
